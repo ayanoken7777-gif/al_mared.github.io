@@ -1,211 +1,0 @@
-<!DOCTYPE html>
-<html dir="rtl" lang="ar">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المارد الأعظم - رواية</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=El+Messiri:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
-    <style>
-        /* إضافة سريعة لضمان ظهور الصورة فوراً وتجاوب أي خطأ في ملف CSS الخارجي */
-        .novel-cover {
-            opacity: 1 !important;
-            display: block !important;
-            background-color: #eee;
-        }
-    </style>
-</head>
-
-<body data-theme="light">
-    <nav class="main-navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-fire"></i>
-                المارد الأعظم
-            </a>
-            
-            <div class="nav-controls">
-                <button class="theme-toggle" id="themeToggle" title="تبديل نظام الألوان">
-                    <i class="fas fa-moon"></i>
-                </button>
-                
-                <button class="progress-btn" id="progressBtn" title="متابعة القراءة">
-                    <i class="fas fa-bookmark"></i>
-                    <span id="lastChapter">الفصل 1</span>
-                </button>
-            </div>
-        </div>
-    </nav>
-    
-    <header class="hero-section">
-        <div class="container">
-            <div class="cover-container">
-                <img src="cover.jpg" alt="غلاف رواية المارد الأعظم" class="novel-cover">
-                <div class="cover-overlay">
-                    <span class="cover-badge">رواية خيالية</span>
-                </div>
-            </div>
-            
-            <div class="novel-info">
-                <h1 class="novel-title">المارد الأعظم</h1>
-                
-                <div class="novel-description">
-                    <p>تبدأ القصة في شوارع مدينة "كازانوفا" الكئيبة، حيث يعيش "حازم" حياة عادية وهامشة، يطارد لقمة العيش ويهرب من ذكريات ماضيه الأليم.</p>
-                    <p>لكن كل شيء يتغير في الليلة التي يُصاب فيها برصاصة غادرة ويُترك للموت، ليجد نفسه مستيقظاً لا بجرح يلتئم، بل بكيان قديم يسكن أعماق روحه؛ مارد ناري يُدعى "الوكس".</p>
-                </div>
-                
-                <div class="novel-meta">
-                    <div class="meta-item">
-                        <i class="fas fa-layer-group"></i>
-                        <span>15 فصل</span>
-                    </div>
-                    <div class="meta-item">
-                        <i class="fas fa-clock"></i>
-                        <span>رواية طويلة</span>
-                    </div>
-                    <div class="meta-item">
-                        <i class="fas fa-fire"></i>
-                        <span>خيال · إثارة · غموض</span>
-                    </div>
-                </div>
-                
-                <div class="action-buttons">
-                    <button class="primary-btn" id="startReadingBtn">
-                        <i class="fas fa-play-circle"></i>
-                        ابدأ القراءة من الفصل الأول
-                    </button>
-                    
-                    <button class="secondary-btn" id="continueReadingBtn">
-                        <i class="fas fa-redo"></i>
-                        متابعة من حيث توقفت
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
-    
-    <main class="container">
-        <section class="chapters-section">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <i class="fas fa-list-ol"></i>
-                    فصول الرواية
-                </h2>
-                <p class="section-subtitle">
-                    اختر الفصل الذي تريد بدء القراءة منه
-                </p>
-            </div>
-            
-            <div class="chapters-grid" id="chaptersGrid">
-            </div>
-            
-            <div class="reading-tips">
-                <h3><i class="fas fa-lightbulb"></i> نصائح للقراءة</h3>
-                <ul>
-                    <li>اقرأ الفصول بالترتيب للحصول على أفضل تجربة سردية</li>
-                    <li>يمكنك تغيير نظام الألوان من الزر العلوي لتخفيف إجهاد العين</li>
-                    <li>سيتم حفظ تقدمك تلقائياً في المتصفح</li>
-                    <li>استمتع برحلة "حازم" مع المارد "الوكس"</li>
-                </ul>
-            </div>
-        </section>
-        
-        <section class="info-section">
-            <h2 class="section-title">
-                <i class="fas fa-info-circle"></i>
-                عن الرواية
-            </h2>
-            <div class="info-content">
-                <p>رواية "المارد الأعظم" تقدم مزيجاً فريداً من الواقع والخيال، حيث تنتقل بالقارئ من شوارع المدينة الباردة إلى عوالم داخلية غامضة.</p>
-                <p>من خلال 15 فصلاً مليئاً بالإثارة، ستتعرف على شخصية "حازم" وتطوره من شخص عادي إلى بطل يكتشف قوى خفية بداخله.</p>
-            </div>
-        </section>
-    </main>
-    
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>المارد الأعظم</h3>
-                    <p>تجربة قراءة فريدة في عالم الخيال العربي</p>
-                </div>
-                <div class="footer-section">
-                    <h3>التصفح السريع</h3>
-                    <a href="#chaptersGrid">فصول الرواية</a>
-                    <button id="themeToggleFooter">تبديل الألوان</button>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 رواية "المارد الأعظم". جميع الحقوق محفوظة.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="themes.js"></script>
-    <script src="navigation.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            createChapterCards();
-            
-            // ربط الأزرار - التعديل هنا فقط
-            document.getElementById('startReadingBtn').onclick = () => window.location.href = 'chapter.html?ch=1';
-            document.getElementById('continueReadingBtn').onclick = () => {
-                const last = localStorage.getItem('lastChapter') || 1;
-                window.location.href = 'chapter.html?ch=' + last;
-            };
-            document.getElementById('progressBtn').onclick = () => {
-                const last = localStorage.getItem('lastChapter') || 1;
-                window.location.href = 'chapter.html?ch=' + last;
-            };
-            document.getElementById('themeToggleFooter').onclick = () => document.getElementById('themeToggle').click();
-        });
-        
-        function createChapterCards() {
-            const container = document.getElementById('chaptersGrid');
-            const chapters = [
-                { number: 1, title: "اللقاء الغامض" },
-                { number: 2, title: "نهاية النزهة" },
-                { number: 3, title: "شخصية ضلعية" },
-                { number: 4, title: "البعد الأبيض" },
-                { number: 5, title: "محاولات يائسة" },
-                { number: 6, title: "خيانة" },
-                { number: 7, title: "تحت أنقاض الصمت" },
-                { number: 8, title: "صدى الهاوية" },
-                { number: 9, title: "معزوفة الفوضى" },
-                { number: 10, title: "أنشودة الجليد والرماد" },
-                { number: 11, title: "قيامة القرمزي ومنفى العمالقة" },
-                { number: 12, title: "مقبرة العوالم والعهد القديم" },
-                { number: 13, title: "سيمفونية التفتت" },
-                { number: 14, title: "بروتوكول العاصمة العليا" },
-                { number: 15, title: "سقوط المركز واندثار العهد القديم" }
-            ];
-            
-            container.innerHTML = '';
-            chapters.forEach(ch => {
-                const card = document.createElement('a');
-                // التعديل الوحيد هنا
-                card.href = 'chapter.html?ch=' + ch.number;
-                card.className = 'chapter-card';
-                card.innerHTML = `
-                    <div class="card-header">
-                        <span class="chapter-number">${ch.number}</span>
-                        <span class="chapter-status">${ch.number === 1 ? 'بداية' : 'مستمر'}</span>
-                    </div>
-                    <h3 class="chapter-title">${ch.title}</h3>
-                    <div class="card-footer">
-                        <span class="read-btn">اقرأ الفصل <i class="fas fa-arrow-left"></i></span>
-                        <span class="page-count">~12 صفحة</span>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
-        }
-    </script>
-</body>
-
-</html>
